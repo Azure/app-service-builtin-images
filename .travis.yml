@@ -1,0 +1,19 @@
+sudo: true
+dist: trusty
+before_install:
+     - chmod +x ./travis-script/main.sh
+     - chmod +x ./travis-script/test-dockerfile.sh
+     - chmod +x ./travis-script/test-build-push.sh
+jobs:
+  include:
+    - stage: check Dockerfile
+      script: ./travis-script/main.sh
+notifications:
+  email:
+    recipients:
+      - v-jizh11@microsoft.com
+      - leonzh@wicresoft.com    
+    on_success: always
+    on_failure: always
+    
+

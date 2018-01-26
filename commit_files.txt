@@ -1,0 +1,7 @@
+drupal-nginx-fpm/0.2/Dockerfile
+drupal-nginx-fpm/0.2/LICENSE
+drupal-nginx-fpm/0.2/README.md
+drupal-nginx-fpm/0.2/drupal.tar.gz
+drupal-nginx-fpm/0.2/entrypoint.sh
+drupal-nginx-fpm/0.2/nginx.conf
+drupal-nginx-fpm/0.2/php.ini

@@ -1,14 +1,44 @@
+# App Service Linux - Built in runtime Docker images
 
-# Contributing
+This repo contains all docker images for App Service on Linux Built in runtime for PHP , Ruby , Node JS and .NET core. 	
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
+## Contribution guide
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+Please follow the guidelines to be compliant . If any docker image is out of compliance , it will be **blacklisted** from this repo and eventually removed. 
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+## Files, folders and naming conventions
+1. Create a new folder for a new docker image and include a version folder . Such as 
+```
++my-image
+	         \  version-number
+		       \Dockerfile and other files 
+		
+```
+ 
+ *Note:  If you are updating an existing image  , create a new version folder within your image folder.*
+  
+2.Include a README.md within version folder to describe :
+		a. Any changes with deployment of use of the image 
+		b. Include comments if the image is not backward compatible and how user can manually upgrade to new version 
+
+
++ [**Best practices**](/contribution-guide/best-practices.md). Best practices for improving the quality of your docker image
++ [**Git tutorial**](/contribution-guide/git-tutorial.md). Step by step to get you started with Git.
++ [**Useful Tools**](/contribution-guide/useful-tools.md). Useful resources and tools for docker image development
+
+## Submission workflow 
+The submission process 6 step process as shown below. The time taken to approve or reject a PR can vary as this is community driven. 
+
+![Submission workflow for docker images](images/submission-flow.PNG?raw=true)
+
+## Deploying Samples
+You can deploy these directly from the Azure portal. 
+
+1. Login to [Azure portal](https://portal.azure.com)
+2. Search for "Web App" 
+3. Select Linux OS 
+
+
+*Note: The first request can take longer to complete since the docker image needs to be pulled and run on the container for the first request. This can occur when you scale up your application or the instance gets recycled.*
+
+
