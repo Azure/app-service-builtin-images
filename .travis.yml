@@ -3,7 +3,9 @@ dist: trusty
 before_install:
      - chmod +x ./travis-script/main.sh
      - chmod +x ./travis-script/test-dockerfile.sh
-     - chmod +x ./travis-script/test-build-push.sh
+     - chmod +x ./travis-script/test-build.sh
+     - chmod +x ./travis-script/test-push-pull-run.sh     
+     - sudo apt-get install -y jq
 jobs:
   include:
     - stage: check Dockerfile
@@ -12,7 +14,8 @@ notifications:
   email:
     recipients:
       - v-jizh11@microsoft.com
-      - leonzh@wicresoft.com    
+      - appgal@microsoft.com    
+      - leonzh@wicresoft.com
     on_success: always
     on_failure: always
     
