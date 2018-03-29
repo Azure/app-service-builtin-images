@@ -241,7 +241,7 @@ echo "========================================"
 echo "========================================" >> result.log
 # Get folders from buildin repo
 if [ ! -e quickstart_folders.txt ]; then
-    curl https://api.github.com/repos/azure/app-service-quickstart-images/contents | jq '.[] | .path' > quickstart_folders.txt
+    curl https://api.github.com/repos/azure/app-service-quickstart-docker-images/contents | jq '.[] | .path' > quickstart_folders.txt
 fi
 # Default account is TEST, if it's master branch, set PROD account.
 if [ "$TRAVIS_BRANCH" == "master" ];then
